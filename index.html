@@ -15,21 +15,12 @@
 
 <div class="container">
     <div class="select-time">
-        <label for="hour">Hour:</label>
-        <select name="hour" id="hour">
-            <option value=0>0</option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5</option>
-            <option value=6>6</option>
-            <option value=7>7</option>
-            <option value=8>8</option>
-            <option value=9>9</option>
-        </select>
+<label for="hour">Hours:</label>
+<input type="number" class="time-input" name="hour" id="hour" min="0" max="24">
         <label for="minute">Minutes:</label>
-        <input type="number"name="minute" id="minute" min="0" max="59">
+        <input type="number" class="time-input" name="minute" id="minute" min="0" max="59">
+                <label for="seconds">Seconds:</label>
+                <input type="number" class="time-input" name="seconds" id="seconds" min="0" max="59">
     </div>
 
 <div class="clock">
@@ -42,10 +33,10 @@
 </div>
 
 <div class="btn-cntr">
-    <button id="start-button">start</button>
-    <button id="pause-button">pause</button>
-    <button id="resume-button">resume</button>
-    <button id="reset-button">reset</button>
+    <button id="start-button">START</button>
+    <button id="pause-button">PAUSE</button>
+    <button id="resume-button">RESUME</button>
+    <button id="reset-button">RESET</button>
 </div>
 
 </div>
