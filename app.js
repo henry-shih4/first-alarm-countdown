@@ -18,6 +18,7 @@ let resumedHour;
 let resumedMin;
 let resumedSec;
 let myInterval;
+let alarm = document.getElementById("alarm");
 
 startBtn.addEventListener("click", startTime);
 
@@ -70,7 +71,10 @@ function runClock() {
     minuteDisplay.innerHTML == 0 &&
     secondDisplay.innerHTML == 0
   ) {
-    alert("Timer done");
+    // alert("Time's up!");
+    var audio = document.createElement("audio");
+    audio.src = "alarm.mp3";
+    audio.play();
     resetClock();
   }
 }
@@ -100,12 +104,14 @@ function resetClock() {
   myStop();
 }
 
-function timerDone() {
-  if (
-    (hourDisplay.innerHTML = 0) &&
-    (minuteDisplay.innerHTML = 0) &&
-    (secondDisplay.innerHTML = 0)
-  ) {
-    alert("Time's up!");
-  }
-}
+// function timerDone() {
+//   if (
+//     (hourDisplay.innerHTML = 0) &&
+//     (minuteDisplay.innerHTML = 0) &&
+//     (secondDisplay.innerHTML = 0)
+//   ) {
+//     alert("Time's up!");
+//     const audio = new Audio("alarm.mp3");
+//     audio.play();
+//   }
+// }

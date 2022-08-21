@@ -86,3 +86,8 @@ button:hover{
         background-color: linen;
         transition:0.3s;
 }
+
+
+audio{
+    display:none;
+}
