@@ -25,13 +25,17 @@ margin-bottom:1.5em;
 }
 
 
-.container{
+#container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.select-time{
+    display:flex;
+    max-width:100%;
+}
 .clock{
     display:flex;
 
@@ -45,6 +49,7 @@ label{
 .time-input{
     font-size:1.5rem;
 margin-right:1em;
+width:100%;
 }
 
 input{
@@ -104,6 +109,16 @@ audio{
     font-size:2rem;
     display: none;
 }
+
+#modal-btn{
+    margin-top:1em;
+    margin-right:0;
+    text-align: center;
+}
 .modal-active{
     display:flex;
+}
+
+.body-shadow{
+    opacity:0.2;
 }

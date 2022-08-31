@@ -19,6 +19,7 @@ let resumedMin;
 let resumedSec;
 let myInterval;
 let alarm = document.getElementById("alarm");
+var audio = document.createElement("audio");
 
 startBtn.addEventListener("click", startTime);
 
@@ -71,11 +72,11 @@ function runClock() {
     minuteDisplay.innerHTML == 0 &&
     secondDisplay.innerHTML == 0
   ) {
-    var audio = document.createElement("audio");
     audio.src = "alarm.mp3";
+    audio.loop = true;
     audio.play();
-    timesUpModal();
     resetClock();
+    timesUpModal();
   }
 }
 
@@ -118,11 +119,16 @@ function resetClock() {
 
 let modal = document.getElementsByClassName("modal");
 let modalButton = document.getElementById("modal-btn");
+let container = document.getElementById("container");
 
 function timesUpModal() {
   modal[0].classList.add("modal-active");
+  container.classList.add("body-shadow");
 }
 
 modalButton.addEventListener("click", function () {
+  audio.pause();
+  audio.loop = false;
+  container.classList.remove("body-shadow");
   modal[0].classList.remove("modal-active");
 });
