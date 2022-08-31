@@ -71,10 +71,10 @@ function runClock() {
     minuteDisplay.innerHTML == 0 &&
     secondDisplay.innerHTML == 0
   ) {
-    // alert("Time's up!");
     var audio = document.createElement("audio");
     audio.src = "alarm.mp3";
     audio.play();
+    timesUpModal();
     resetClock();
   }
 }
@@ -115,3 +115,14 @@ function resetClock() {
 //     audio.play();
 //   }
 // }
+
+let modal = document.getElementsByClassName("modal");
+let modalButton = document.getElementById("modal-btn");
+
+function timesUpModal() {
+  modal[0].classList.add("modal-active");
+}
+
+modalButton.addEventListener("click", function () {
+  modal[0].classList.remove("modal-active");
+});
