@@ -22,6 +22,7 @@ justify-content: center;
 align-items: center;
 font-size:2.5rem;
 margin-bottom:1.5em;
+text-align: center;
 }
 
 
@@ -34,7 +35,12 @@ margin-bottom:1.5em;
 
 .select-time{
     display:flex;
-    max-width:100%;
+    max-width:75%;
+    justify-content: center;
+}
+
+.select-time input{
+    min-width:60px;
 }
 .clock{
     display:flex;
@@ -121,4 +127,25 @@ audio{
 
 .body-shadow{
     opacity:0.2;
+}
+
+ .btn-cntr {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+@media screen and (max-width:700px) {
+ 
+    .timer{
+        font-size:2.5rem;
+    }
+    .time-text{
+        font-size:1rem;
+    }
+        button {
+            height: 30px;
+            width: 60px;
+            font-size:12px;
+        }
+
 }
